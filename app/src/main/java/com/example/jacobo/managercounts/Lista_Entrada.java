@@ -6,12 +6,13 @@ package com.example.jacobo.managercounts;
 
 public class Lista_Entrada {
     private int idImagen;
-    private String nombre, descripcion;
+    private String nombre, descripcion,valor;
 
-    public Lista_Entrada(int idImagen, String nombre, String descripcion) {
+    public Lista_Entrada(int idImagen, String nombre, String descripcion,String valor) {
         this.idImagen = idImagen;
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.valor = valor;
     }
 
     public int getIdImagen() {
@@ -36,6 +37,14 @@ public class Lista_Entrada {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getValor() {
+        return valor;
+    }
+
+    public void setValor(String nombre) {
+        this.valor = valor;
     }
 }
 

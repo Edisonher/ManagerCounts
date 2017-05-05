@@ -38,4 +38,8 @@
     <string name="mi_cuenta">Mi Cuenta</string>
     <string name="catalogo">Catálogo</string>
     <string name="hacer_pedidos">Hacer Pedidos</string>
+    <string name="abono">ABONO</string>
+    <string name="saldo">SALDO</string>
+    <string name="compras">COMPRAS</string>
+    <string name="ventas">VENTAS</string>
 </resources>

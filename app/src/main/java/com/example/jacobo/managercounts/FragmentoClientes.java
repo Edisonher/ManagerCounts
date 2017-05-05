@@ -3,9 +3,12 @@ package com.example.jacobo.managercounts;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,29 +22,41 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentProductos extends Fragment {
+public class FragmentoClientes extends Fragment {
+
+    SharedPreferences prefs;
+    SharedPreferences.Editor editor;
 
     Intent intent;
 
     private Lista_Entrada[] datos = new Lista_Entrada[] {
-            new Lista_Entrada(R.drawable.panes, "Producto 1", "     50000","  50000"),
-            new Lista_Entrada(R.drawable.panes, "Producto 2", "     50000","  50000"),
-            new Lista_Entrada(R.drawable.panes, "Producto 3", "     50000","  50000"),
-            new Lista_Entrada(R.drawable.panes, "Producto 4", "     50000","  50000")
+            new Lista_Entrada(R.drawable.usuario, "Cliente 1", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 2", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 3", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 4", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 1", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 2", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 3", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 4", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 1", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 2", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 3", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 4", "     01/01/2017","  50000")
     };
 
 
-    public FragmentProductos() {
+    public FragmentoClientes() {
         // Required empty public constructor
     }
 
     ListView list;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view= inflater.inflate(R.layout.fragment_productos, container, false);
+        View view= inflater.inflate(R.layout.fragment_clientes, container, false);
+        // Inflate the layout for this fragment
+        //return inflater.inflate(R.layout.fragment_clientes, container, false);
 
         list = (ListView) view.findViewById(R.id.lista);
         //list = (ListView) view.findViewById(R.id.lista);
@@ -61,10 +76,22 @@ public class FragmentProductos extends Fragment {
 
                 switch (sel) {
                     case 0:
-                        /*Fragment fragment = new HistoriaFragment();
-                        FragmentActivity myContext = (FragmentActivity) getActivity();
-                        myContext.getSupportFragmentManager().beginTransaction().replace(R.id.ContenedorCliente,fragment).commit();
-                        break;
+
+                        Fragment fragment1 = new FragmentoInfoclientes();
+                        FragmentActivity myContext1 = (FragmentActivity) getActivity();
+                        myContext1.getSupportFragmentManager().beginTransaction().replace(R.id.Contenedor,fragment1).commit();
+
+                        /*Fragment fragmentoGenerico = new FragmentoInicio();
+                        //FragmentManager fragmentManager = getSupportFragmentManager();
+
+                        fragmentoGenerico = new FragmentoInfoclientes();
+                        FragmentActivity myContext1 = (FragmentActivity) getActivity();
+                        myContext1.getSupportFragmentManager().beginTransaction().replace(R.id.Contenedor,fragmentoGenerico).commit();
+                        */
+
+                        //editor.commit();
+                        //fragmentManager.beginTransaction().replace(R.id.Contenedor, fragmentoGenerico).commit();
+                        break;/*
                     case 1:
                         Fragment fragment1 = new HistoriaDosFragment();
                         FragmentActivity myContext1 = (FragmentActivity) getActivity();
@@ -80,7 +107,7 @@ public class FragmentProductos extends Fragment {
                         FragmentActivity myContext3 = (FragmentActivity) getActivity();
                         myContext3.getSupportFragmentManager().beginTransaction().replace(R.id.ContenedorCliente,fragment3).commit();
                         break;  */
-                        break;
+                        //break;
 
                 }
             }
@@ -88,8 +115,6 @@ public class FragmentProductos extends Fragment {
 
         return view;
     }
-
-
     public class Adapter extends ArrayAdapter<Lista_Entrada> {  //Le pasamos q tpo de datos mandamos
 
         public Adapter(Context context, Lista_Entrada[] datos) {

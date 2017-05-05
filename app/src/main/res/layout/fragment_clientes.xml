@@ -2,12 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jacobo.managercounts.FragmentProductos">
+    tools:context="com.example.jacobo.managercounts.FragmentoClientes">
 
+    <!-- TODO: Update blank fragment layout -->
     <ListView
         android:id="@+id/lista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
     </ListView>
 

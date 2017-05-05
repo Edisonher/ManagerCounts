@@ -39,6 +39,16 @@ public class DrawerVendActivity extends AppCompatActivity
         prefs = getSharedPreferences("MisPreferencias",MODE_PRIVATE);
         editor = prefs.edit();
 
+
+        Fragment fragmentoGenerico = null;
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        fragmentoGenerico = new FragmentoInicio();
+
+        editor.commit();
+        fragmentManager.beginTransaction().replace(R.id.Contenedor, fragmentoGenerico).commit();
+
+
     }
 
     @Override
@@ -88,7 +98,7 @@ public class DrawerVendActivity extends AppCompatActivity
 
         }
         else if (id == R.id.nav_Clientes) {
-            fragmentoGenerico = new FragmentoInicio();
+            fragmentoGenerico = new FragmentoClientes();
         }
         else if (id == R.id.nav_Inventario) {
             fragmentoGenerico = new FragmentProductos();

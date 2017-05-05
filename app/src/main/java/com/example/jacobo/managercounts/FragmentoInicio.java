@@ -24,10 +24,10 @@ public class FragmentoInicio extends Fragment {
     Intent intent;
 
     private Lista_Entrada[] datos = new Lista_Entrada[] {
-            new Lista_Entrada(R.drawable.usuario, "Cliente 1", "Barrio 1"),
-            new Lista_Entrada(R.drawable.usuario, "Cliente 2", "Barrio 2"),
-            new Lista_Entrada(R.drawable.usuario, "Cliente 3", "Barrio 3"),
-            new Lista_Entrada(R.drawable.usuario, "Cliente 4", "Barrio 4")
+            new Lista_Entrada(R.drawable.usuario, "Cliente 1", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 2", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 3", "     01/01/2017","  50000"),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 4", "     01/01/2017","  50000")
     };
 
     public FragmentoInicio() {
@@ -63,7 +63,7 @@ public class FragmentoInicio extends Fragment {
                         /*Fragment fragment = new HistoriaFragment();
                         FragmentActivity myContext = (FragmentActivity) getActivity();
                         myContext.getSupportFragmentManager().beginTransaction().replace(R.id.ContenedorCliente,fragment).commit();
-                        break;
+                        /*break;
                     case 1:
                         Fragment fragment1 = new HistoriaDosFragment();
                         FragmentActivity myContext1 = (FragmentActivity) getActivity();
@@ -107,6 +107,9 @@ public class FragmentoInicio extends Fragment {
 
             TextView descrip = (TextView) item.findViewById(R.id.tDescrip);
             descrip.setText(datos[position].getDescripcion());
+
+            TextView valor = (TextView) item.findViewById(R.id.tvalor);
+            valor.setText(datos[position].getValor());
 
             ImageView imagen = (ImageView) item.findViewById(R.id.iFoto);
             imagen.setImageResource(datos[position].getIdImagen());

@@ -24,13 +24,17 @@
             <TextView
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:text="@string/barrio"
+                android:text="@string/productos"
                 android:textColor="@android:color/black"
                 android:textSize="25sp"
                 android:id="@+id/tNombre"/>
 
 
          </LinearLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,29 +44,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FECHA"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
-
-                />
-            <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
-            android:id="@+id/tDescrip"
-            />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:orientation="horizontal"
-            android:layout_margin="0dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="VALOR"
+                android:text="PRECIO"
                 android:textSize="20sp"
                 android:textColor="@android:color/black"
 
@@ -70,14 +52,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:id="@+id/tvalor"
+                android:textColor="@android:color/black"
+                android:id="@+id/tDescrip"
                 />
+        </LinearLayout>
+
         </LinearLayout>
 
 
 
     </LinearLayout>
-
-</LinearLayout>
