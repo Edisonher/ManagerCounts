@@ -1,0 +1,41 @@
+<resources>
+    <string name="title_activity_drawer_cliente">ManagerCounts Cliente</string>
+    <string name="title_activity_drawer">ManagerCounts Admin</string>
+    <string name="app_name">Manager Counts</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--STRINGS DE LA ACTIVIDAD LOGIN-->
+    <string name="usuario">USUARIO</string>
+    <string name="contrasena">CONTRASEÑA</string>
+    <string name="InicioSesion">INICIAR</string>
+    <string name="registrarse">REGISTRARSE</string>
+
+    <!--STRINGS DE LA ACTIVIDAD REGISTRO-->
+    <string name="nombre">NOMBRES</string>
+    <string name="apellidos">APELLIDOS</string>
+    <string name="direccion">DIRECCIÓN</string>
+    <string name="telefono">TELÉFONO</string>
+    <string name="barrio">BARRIO</string>
+    <string name="Confir.contraseña">CONFIRMAR CONTRASEÑA</string>
+    <string name="correo">CORREO ELECTRÓNICO</string>
+    <string name="cancelar">CANCELAR</string>
+
+    <!--STRINGS DEL MENU DENAVEGACION DEL VENDEDOR-->
+    <string name="inicio">Inicio</string>
+    <string name="clientes">Clientes</string>
+    <string name="productos">Productos</string>
+    <string name="revisar_pedidos">Revisar Pedidos</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+
+    <!--STRINGS DEL MENU DENAVEGACION DEL CLIENTE-->
+    <string name="mi_cuenta">Mi Cuenta</string>
+    <string name="catalogo">Catálogo</string>
+    <string name="hacer_pedidos">Hacer Pedidos</string>
+</resources>
