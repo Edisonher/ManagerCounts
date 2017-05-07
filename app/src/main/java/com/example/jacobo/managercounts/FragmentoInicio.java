@@ -24,10 +24,10 @@ public class FragmentoInicio extends Fragment {
     Intent intent;
 
     private Lista_Entrada[] datos = new Lista_Entrada[] {
-            new Lista_Entrada(R.drawable.usuario, "Cliente 1", "     01/01/2017","  50000"),
-            new Lista_Entrada(R.drawable.usuario, "Cliente 2", "     01/01/2017","  50000"),
-            new Lista_Entrada(R.drawable.usuario, "Cliente 3", "     01/01/2017","  50000"),
-            new Lista_Entrada(R.drawable.usuario, "Cliente 4", "     01/01/2017","  50000")
+            new Lista_Entrada(R.drawable.usuario, "Cliente 1", "     01/01/2017","  50000",""),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 2", "     01/01/2017","  50000",""),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 3", "     01/01/2017","  50000",""),
+            new Lista_Entrada(R.drawable.usuario, "Cliente 4", "     01/01/2017","  50000","")
     };
 
     public FragmentoInicio() {

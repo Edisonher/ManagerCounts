@@ -42,4 +42,8 @@
     <string name="saldo">SALDO</string>
     <string name="compras">COMPRAS</string>
     <string name="ventas">VENTAS</string>
+    <string name="producto">PRODUCTO</string>
+    <string name="nombreprod">NOMBRE PORDUCTO</string>
+    <string name="precio">PRECIO</string>
+    <string name="guardar">GUARDAR</string>
 </resources>

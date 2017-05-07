@@ -105,8 +105,7 @@ public class DrawerVendActivity extends AppCompatActivity
 
         }
         else if (id == R.id.nav_RevisarPedidos) {
-           // editor.putString("Texto","Pedidos");
-            //editor.putInt("Imagen",R.drawable.panes);
+            fragmentoGenerico = new FragmentPedidos();
         }
         else if (id == R.id.nav_CerrarSesion) {
             startActivity(new Intent(this, LoginActivity.class));

@@ -19,19 +19,19 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentProductos extends Fragment {
+public class FragmentPedidos extends Fragment {
 
     Intent intent;
 
     private Lista_Entrada[] datos = new Lista_Entrada[] {
-            new Lista_Entrada(R.drawable.panes, "Producto 1", "     50000","  50000",""),
-            new Lista_Entrada(R.drawable.panes, "Producto 2", "     50000","  50000",""),
-            new Lista_Entrada(R.drawable.panes, "Producto 3", "     50000","  50000",""),
-            new Lista_Entrada(R.drawable.panes, "Producto 4", "     50000","  50000","")
+            new Lista_Entrada(R.drawable.panes, "Producto 1", "Cliente 1"," 5 ","Espera"),
+            new Lista_Entrada(R.drawable.panes, "Producto 2", "Cliente 2"," 10 ","Recibido"),
+            new Lista_Entrada(R.drawable.panes, "Producto 3","Cliente 3"," 8 ","Aceptado"),
+            new Lista_Entrada(R.drawable.panes, "Producto 4", "Cliente 4"," 20  ","Negado")
     };
 
 
-    public FragmentProductos() {
+    public FragmentPedidos() {
         // Required empty public constructor
     }
 
@@ -39,9 +39,9 @@ public class FragmentProductos extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View view= inflater.inflate(R.layout.fragment_productos, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view= inflater.inflate(R.layout.fragment_pedidos, container, false);
 
         list = (ListView) view.findViewById(R.id.lista);
         //list = (ListView) view.findViewById(R.id.lista);
@@ -93,7 +93,7 @@ public class FragmentProductos extends Fragment {
     public class Adapter extends ArrayAdapter<Lista_Entrada> {  //Le pasamos q tpo de datos mandamos
 
         public Adapter(Context context, Lista_Entrada[] datos) {
-            super(context, R.layout.listview_itemprod, datos);
+            super(context, R.layout.listview_itempedi, datos);
         }
 
 
@@ -101,17 +101,21 @@ public class FragmentProductos extends Fragment {
         public View getView(int position, View convertView, ViewGroup parent) {
 
             LayoutInflater inflater = LayoutInflater.from(getContext());
-            View item = inflater.inflate(R.layout.listview_itemprod, null,true);
+            View item = inflater.inflate(R.layout.listview_itempedi, null,true);
 
-            TextView nombre = (TextView) item.findViewById(R.id.tNombrep);
+            TextView nombre = (TextView) item.findViewById(R.id.tNombreped);
             nombre.setText(datos[position].getNombre());
 
-            TextView descrip = (TextView) item.findViewById(R.id.tDescripp);
+            TextView descrip = (TextView) item.findViewById(R.id.tDescripped);
             descrip.setText(datos[position].getDescripcion());
 
+            TextView valor = (TextView) item.findViewById(R.id.tvalorped);
+            valor.setText(datos[position].getValor());
 
+            TextView estado = (TextView) item.findViewById(R.id.testadoped);
+            estado.setText(datos[position].getEstado());
 
-            ImageView imagen = (ImageView) item.findViewById(R.id.iFotop);
+            ImageView imagen = (ImageView) item.findViewById(R.id.iFotoped);
             imagen.setImageResource(datos[position].getIdImagen());
 
             return item;

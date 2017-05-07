@@ -8,7 +8,7 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:src="@drawable/panes"
-        android:id="@+id/iFotop"/>
+        android:id="@+id/iFotoped"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,27 +24,49 @@
             <TextView
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:text="@string/productos"
+                android:text="@string/barrio"
                 android:textColor="@android:color/black"
                 android:textSize="25sp"
-                android:id="@+id/tNombrep"/>
+                android:id="@+id/tNombreped"/>
 
 
          </LinearLayout>
-
-        <android.support.v4.widget.Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:orientation="horizontal"
             android:layout_margin="0dp">
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+                android:text="@string/producto"
+            android:id="@+id/tDescripped"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:layout_margin="0dp">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:text="5"
+                android:id="@+id/tvalorped"
+                android:textAlignment="center"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PRECIO"
+                android:text="ESTADO"
                 android:textSize="20sp"
                 android:textColor="@android:color/black"
 
@@ -52,14 +74,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
                 android:textColor="@android:color/black"
-                android:id="@+id/tDescripp"
+                android:textSize="20sp"
+                android:id="@+id/testadoped"
+                android:textAlignment="center"
                 />
-        </LinearLayout>
-
         </LinearLayout>
 
 
 
     </LinearLayout>
+
+</LinearLayout>
